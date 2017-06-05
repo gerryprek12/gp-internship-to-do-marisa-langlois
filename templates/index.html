@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>Hi {{ user.username }}!</h4>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
