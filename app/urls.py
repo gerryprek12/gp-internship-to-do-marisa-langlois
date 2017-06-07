@@ -23,4 +23,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
+    url(r'^login/', views.login_view, name='login'),
+    url(r'^signup/', views.signup_view, name='signup'),
+    url(r'^logout/', views.logout_view, name='logout'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
